@@ -1,0 +1,818 @@
+{
+  "contractName": "IWoofGang",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "NFTAirDrop",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "newNFTCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "newBaseUri",
+          "type": "string"
+        }
+      ],
+      "name": "updateBaseURI",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newMintEndTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateEndTime",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newMintPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateMintPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "quantity",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "account",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amount",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "airDrop",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mintRemainingToOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.2+commit.661d1103\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"NFTAirDrop\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"newNFTCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"account\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amount\",\"type\":\"uint256[]\"}],\"name\":\"airDrop\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"quantity\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mintRemainingToOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"newBaseUri\",\"type\":\"string\"}],\"name\":\"updateBaseURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newMintEndTime\",\"type\":\"uint256\"}],\"name\":\"updateEndTime\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newMintPrice\",\"type\":\"uint256\"}],\"name\":\"updateMintPrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of the Entrypass token implementation.\",\"kind\":\"dev\",\"methods\":{\"airDrop(address[],uint256[])\":{\"details\":\"Airdrop the Tokens to assigned address by the owner\"},\"mint(uint256)\":{\"details\":\"Mint a new token \"},\"mintRemainingToOwner(uint256)\":{\"details\":\"Mint the remaining token which is left to mint\"},\"updateBaseURI(string)\":{\"details\":\"Update the base uri\"},\"updateEndTime(uint256)\":{\"details\":\"Update the end time\"},\"updateMintPrice(uint256)\":{\"details\":\"Update the mint price\"},\"withdraw(address,uint256)\":{\"details\":\"Withdraw the share amount to account owner\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IWoofGang.sol\":\"IWoofGang\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1500},\"remappings\":[]},\"sources\":{\"project:/contracts/IWoofGang.sol\":{\"keccak256\":\"0xdf09b22d70268c6eb53780d6377c93f682439ed61b629c3840f72bed31e64c9f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://25389c1cf2d862783e993e1230291cce656b709a6c81a34ce1c54a7f3a77014f\",\"dweb:/ipfs/QmQPqVcCYpxZApjL8JcsJoe2Pm5MQJTMeyVNWv7v4sS4mA\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n// Creator: The Systango Team\n\npragma solidity ^0.8.2;\n\n/**\n * @dev Interface of the Entrypass token implementation.\n*/\n\ninterface IWoofGang {\n\n    // The event emitted when new token is minted\n    event newNFTCreated(uint tokenId);\n\n    // The event emitted when nft will airdrop\n    event NFTAirDrop(uint tokenId);\n\n    /**\n     * @dev Update the base uri\n     */\n    function updateBaseURI(string memory newBaseUri) external;\n\n    /**\n     * @dev Update the end time\n     */\n    function updateEndTime(uint256 newMintEndTime) external;\n    \n    /**\n     * @dev Update the mint price\n     */\n    function updateMintPrice (uint256 newMintPrice) external;\n\n    /**\n     * @dev Withdraw the share amount to account owner\n     */\n    function withdraw(address payable account , uint256 amount) external;\n\n    /**\n     * @dev Mint a new token \n     */\n    function mint(uint256 quantity) external payable;\n    \n    /**\n     * @dev Airdrop the Tokens to assigned address by the owner\n     */\n    function airDrop(address[] memory account , uint256[] memory amount) external;\n\n    /**\n     * @dev Mint the remaining token which is left to mint\n     */\n    function mintRemainingToOwner(uint amount)external ; \n}",
+  "sourcePath": "/home/ulap30/blockchain_contracts/woof-gang/contracts/IWoofGang.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IWoofGang.sol",
+    "exportedSymbols": {
+      "IWoofGang": [
+        2294
+      ]
+    },
+    "id": 2295,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2236,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:23:13"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 2237,
+          "nodeType": "StructuredDocumentation",
+          "src": "88:63:13",
+          "text": " @dev Interface of the Entrypass token implementation."
+        },
+        "fullyImplemented": false,
+        "id": 2294,
+        "linearizedBaseContracts": [
+          2294
+        ],
+        "name": "IWoofGang",
+        "nameLocation": "163:9:13",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 2241,
+            "name": "newNFTCreated",
+            "nameLocation": "236:13:13",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2240,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2239,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "255:7:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2241,
+                  "src": "250:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2238,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "250:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "249:14:13"
+            },
+            "src": "230:34:13"
+          },
+          {
+            "anonymous": false,
+            "id": 2245,
+            "name": "NFTAirDrop",
+            "nameLocation": "323:10:13",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2244,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2243,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "339:7:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2245,
+                  "src": "334:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2242,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:14:13"
+            },
+            "src": "317:31:13"
+          },
+          {
+            "documentation": {
+              "id": 2246,
+              "nodeType": "StructuredDocumentation",
+              "src": "354:43:13",
+              "text": " @dev Update the base uri"
+            },
+            "functionSelector": "931688cb",
+            "id": 2251,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateBaseURI",
+            "nameLocation": "411:13:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2249,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2248,
+                  "mutability": "mutable",
+                  "name": "newBaseUri",
+                  "nameLocation": "439:10:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2251,
+                  "src": "425:24:13",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2247,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "425:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "424:26:13"
+            },
+            "returnParameters": {
+              "id": 2250,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "459:0:13"
+            },
+            "scope": 2294,
+            "src": "402:58:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2252,
+              "nodeType": "StructuredDocumentation",
+              "src": "466:43:13",
+              "text": " @dev Update the end time"
+            },
+            "functionSelector": "6ab3846b",
+            "id": 2257,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateEndTime",
+            "nameLocation": "523:13:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2254,
+                  "mutability": "mutable",
+                  "name": "newMintEndTime",
+                  "nameLocation": "545:14:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2257,
+                  "src": "537:22:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2253,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "537:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "536:24:13"
+            },
+            "returnParameters": {
+              "id": 2256,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "569:0:13"
+            },
+            "scope": 2294,
+            "src": "514:56:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2258,
+              "nodeType": "StructuredDocumentation",
+              "src": "580:45:13",
+              "text": " @dev Update the mint price"
+            },
+            "functionSelector": "00728e46",
+            "id": 2263,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateMintPrice",
+            "nameLocation": "639:15:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2261,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2260,
+                  "mutability": "mutable",
+                  "name": "newMintPrice",
+                  "nameLocation": "664:12:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2263,
+                  "src": "656:20:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2259,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "655:22:13"
+            },
+            "returnParameters": {
+              "id": 2262,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "686:0:13"
+            },
+            "scope": 2294,
+            "src": "630:57:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2264,
+              "nodeType": "StructuredDocumentation",
+              "src": "693:66:13",
+              "text": " @dev Withdraw the share amount to account owner"
+            },
+            "functionSelector": "f3fef3a3",
+            "id": 2271,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "773:8:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2269,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2266,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "798:7:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2271,
+                  "src": "782:23:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 2265,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "782:15:13",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2268,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "816:6:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2271,
+                  "src": "808:14:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2267,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "808:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "781:42:13"
+            },
+            "returnParameters": {
+              "id": 2270,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "832:0:13"
+            },
+            "scope": 2294,
+            "src": "764:69:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2272,
+              "nodeType": "StructuredDocumentation",
+              "src": "839:41:13",
+              "text": " @dev Mint a new token "
+            },
+            "functionSelector": "a0712d68",
+            "id": 2277,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "894:4:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2275,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2274,
+                  "mutability": "mutable",
+                  "name": "quantity",
+                  "nameLocation": "907:8:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2277,
+                  "src": "899:16:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2273,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "899:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "898:18:13"
+            },
+            "returnParameters": {
+              "id": 2276,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "933:0:13"
+            },
+            "scope": 2294,
+            "src": "885:49:13",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2278,
+              "nodeType": "StructuredDocumentation",
+              "src": "944:75:13",
+              "text": " @dev Airdrop the Tokens to assigned address by the owner"
+            },
+            "functionSelector": "65216a41",
+            "id": 2287,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "airDrop",
+            "nameLocation": "1033:7:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2285,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2281,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1058:7:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2287,
+                  "src": "1041:24:13",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2279,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1041:7:13",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2280,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1041:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2284,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1085:6:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2287,
+                  "src": "1068:23:13",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2282,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1068:7:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2283,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1068:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1040:52:13"
+            },
+            "returnParameters": {
+              "id": 2286,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1101:0:13"
+            },
+            "scope": 2294,
+            "src": "1024:78:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2288,
+              "nodeType": "StructuredDocumentation",
+              "src": "1108:70:13",
+              "text": " @dev Mint the remaining token which is left to mint"
+            },
+            "functionSelector": "8c9f9c6f",
+            "id": 2293,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintRemainingToOwner",
+            "nameLocation": "1192:20:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2291,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2290,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1218:6:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2293,
+                  "src": "1213:11:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2289,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1213:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1212:13:13"
+            },
+            "returnParameters": {
+              "id": 2292,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1234:0:13"
+            },
+            "scope": 2294,
+            "src": "1183:52:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2295,
+        "src": "153:1085:13"
+      }
+    ],
+    "src": "63:1175:13"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.2+commit.661d1103.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-05-19T11:30:22.652Z",
+  "devdoc": {
+    "details": "Interface of the Entrypass token implementation.",
+    "kind": "dev",
+    "methods": {
+      "airDrop(address[],uint256[])": {
+        "details": "Airdrop the Tokens to assigned address by the owner"
+      },
+      "mint(uint256)": {
+        "details": "Mint a new token "
+      },
+      "mintRemainingToOwner(uint256)": {
+        "details": "Mint the remaining token which is left to mint"
+      },
+      "updateBaseURI(string)": {
+        "details": "Update the base uri"
+      },
+      "updateEndTime(uint256)": {
+        "details": "Update the end time"
+      },
+      "updateMintPrice(uint256)": {
+        "details": "Update the mint price"
+      },
+      "withdraw(address,uint256)": {
+        "details": "Withdraw the share amount to account owner"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

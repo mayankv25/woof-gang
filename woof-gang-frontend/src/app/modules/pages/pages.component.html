@@ -1,0 +1,98 @@
+<!-- <p>pages works!</p>
+<button (click)="test()">Test MetaMask</button> -->
+
+<section class="background-slide">
+    <div class="nav-btn">
+        <button class="theme-btn disconnect-btn" (click)="connect();">
+            <img src="../../../assets/images/unlink.png" *ngIf="!publicAddress" alt="Disconnect">
+            <img src="../../../assets/images/link.png" *ngIf="publicAddress" alt="Connect">
+            &nbsp;
+            <span *ngIf="publicAddress">
+                ({{( publicAddress | slice:0:6) + "....." + ( publicAddress | slice:-6)}})
+            </span>
+            <span *ngIf="!publicAddress">Disconnect</span>
+        </button>
+    </div>
+    <img src="../../../assets/images/bone1.png" data-speed="-5" class="layer">
+    <img src="../../../assets/images/bone2.png" data-speed="5" class="layer">
+    <img src="../../../assets/images/bone3.png" data-speed="2" class="layer">
+    <img src="../../../assets/images/bone4.png" data-speed="6" class="layer">
+    <img src="../../../assets/images/dog1.png" data-speed="8" class="layer">
+    <img src="../../../assets/images/dog2.png" data-speed="-2" class="layer">
+    <img src="../../../assets/images/dog3.png" data-speed="4" class="layer">
+    <img src="../../../assets/images/dog4.png" data-speed="-9" class="layer">
+    <img src="../../../assets/images/dog5.png" data-speed="-6" class="layer">
+    <img src="../../../assets/images/dog6.png" data-speed="-7" class="layer">
+    <img src="../../../assets/images/dog7.png" data-speed="5" class="layer">
+    <img src="../../../assets/images/dog8.png" data-speed="2" class="layer">
+    <img src="../../../assets/images/dog9.png" data-speed="2" class="layer">
+
+    <div class="main-containt">
+        <img class="img-fluid text-img" src="../../../assets/images/text.svg" alt="text">
+        <!-- <h2 class="main-heading">THE WOOF<br /> GANG</h2> -->
+        <button type="button" class="theme-btn btn-blue paw-hover btn-lg my-4"
+            (click)="openMintDialog('modal')"
+        >
+            Mint Now
+            <div class="hover-section">
+                <img class="img-fluid" src="../../../assets/images/dog_paw.svg" alt="paw">
+            </div>
+        </button>
+
+        <div class="modal-overlay" id="modal">
+            <div class="modal-main-wrapper">
+                <div class="close" (click)="closeMintDialog('modal')">
+                    <img src="../../../assets/images/Vector.svg" alt="close">
+                </div>
+                <img class="modal-header-img" src="../../../assets/images/dog.png" alt="woof">
+                <div class="modal-body">
+                    <p class="modal-para">How big is your pack?</p>
+                    <div class="quantity-wrapper mb-3">
+                        <input placeholder="Enter NFT Quantity" type="text" class="w-75"
+                            oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                            [(ngModel)]="quantity" required>
+                        <div class="fixed-element">
+                            <p class="static-text">=&nbsp;<img src="../../../assets/images/etherum.png"
+                                    alt="etherum">&nbsp;
+                                <span>{{ getConvertedEth() }}</span>
+                                Eth
+                            </p>
+                        </div>
+                    </div>
+                    <button type="button" class="theme-btn btn-blue btn-lg my-4 modal-btn"
+                        [disabled]="!isGetMintPriceDone || isSubmitting || !quantity" (click)="mintNow();">
+                        <span *ngIf="isGetMintPriceDone && !isSubmitting">Mint</span>
+                        <div *ngIf="!isGetMintPriceDone || isSubmitting" class="spinner-border text-warning"
+                            role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <p class="link-text">View full collection on <a [href]="openSeaLink" target="_blank">Open Sea</a></p>
+    </div>
+    <div class="footer-links">
+        <div class="left-link">
+            <ul class="footer-items">
+                <li>
+                    <a [href]="smartContractLink" target="_blank">Smart Contract</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-links ml-auto">
+            <ul class="footer-items">
+                <li>
+                    <a href="#">Discord</a>
+                </li>
+                <li>
+                    <a [href]="openSeaLink" target="_blank">OpenSea</a>
+                </li>
+                <li>
+                    <a href="#">Twitter</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
